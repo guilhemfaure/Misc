@@ -1,6 +1,7 @@
 __description__ = ''' '''
 __author__ = '''Guilhem Faure, PhD '''
 
+dssp_exe = 'dsspcmbi'
 from Bio.PDB import *
 import sys
 
@@ -15,6 +16,10 @@ if __name__ == '__main__':
         raise('Provide a pdb file: python ParsePDB.pdb 1a2k.pdb')
 
     Mypdb = parser_pdb.get_structure('mystructure', p_pdb)
+    #structure = Mypdb[0]
+
+
+    #DSSP(structure, sys.argv[1])
 
     # This print Res Number XYZ bfactor
     for model in Mypdb:
